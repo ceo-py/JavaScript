@@ -1,7 +1,10 @@
 function calculateCircleArea(r) {
-    r = Number(r)
-    console.log(`${(Math.PI * r * r).toFixed(2)}`)
-    console.log(`${(2 * Math.PI * r).toFixed(2)}`)
+    r = parseFloat(r)
+    const pi = Math.PI;
+    const area = pi * r * r;
+    const parameter = 2 * pi * r;
+    console.log(area.toFixed(2));
+    console.log(parameter.toFixed(2));
 }
 
 calculateCircleArea(['35.875'])
