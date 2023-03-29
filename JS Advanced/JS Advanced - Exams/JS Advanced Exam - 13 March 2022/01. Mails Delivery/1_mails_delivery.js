@@ -45,14 +45,19 @@ function solve() {
 
     }
 
-    const sendBtnFunctionality = (event) => {
-        event.preventDefault()
-        const elementHtml = event.currentTarget.parentElement.parentElement
+    const createMainToTitleElement = (elementHtml) => {
         const [recipient, title] = Array.from(elementHtml.querySelectorAll('h4'))
 
         const li = createElement({tag: 'li'})
         li.appendChild(createElement({tag: 'span', textContent: `To: ${recipient.textContent.split(': ')[1]}`}))
         li.appendChild(createElement({tag: 'span', textContent: `Title: ${title.textContent.split(': ')[1]}`}))
+        return li
+    }
+
+    const sendBtnFunctionality = (event) => {
+        event.preventDefault()
+        const elementHtml = event.currentTarget.parentElement.parentElement
+        const li = createMainToTitleElement(elementHtml)
 
         const div = createElement({tag: 'div', className: ['btn']})
         div.appendChild(createElement({
@@ -71,11 +76,7 @@ function solve() {
     const deleteBtnFunctionality = (event) => {
         event.preventDefault()
         const elementHtml = event.currentTarget.parentElement.parentElement
-        const [recipient, title] = Array.from(elementHtml.querySelectorAll('h4'))
-
-        const li = createElement({tag: 'li'})
-        li.appendChild(createElement({tag: 'span', textContent: `To: ${recipient.textContent.split(': ')[1]}`}))
-        li.appendChild(createElement({tag: 'span', textContent: `Title: ${title.textContent.split(': ')[1]}`}))
+        const li = createMainToTitleElement(elementHtml)
 
         event.currentTarget.parentElement.parentElement.remove()
         mail.delete.appendChild(li)
