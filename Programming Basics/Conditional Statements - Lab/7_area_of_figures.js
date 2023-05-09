@@ -26,3 +26,20 @@ function areaOfFigures(array) {
 areaOfFigures(["triangle",
 "4.5",
 "20"])
+
+
+
+// function areaOfFigures(params) {
+//     const [figure, firstParam, secondParam] = params.map(x => isNaN(x) ? x: Number(x))
+//
+//     const allFigures = {
+//         'square': firstParam * firstParam,
+//         'rectangle': firstParam * secondParam,
+//         'circle': Math.PI * (firstParam ** firstParam),
+//         'triangle': (firstParam * secondParam) / 2
+//     }
+//     console.log(allFigures[figure]);
+// }
+//
+//
+// areaOfFigures(["square", "5"])
