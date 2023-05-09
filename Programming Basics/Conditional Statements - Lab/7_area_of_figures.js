@@ -35,7 +35,7 @@ areaOfFigures(["triangle",
 //     const allFigures = {
 //         'square': firstParam * firstParam,
 //         'rectangle': firstParam * secondParam,
-//         'circle': Math.PI * (firstParam ** firstParam),
+//         'circle': (firstParam * firstParam) * Math.PI,
 //         'triangle': (firstParam * secondParam) / 2
 //     }
 //     console.log(allFigures[figure]);
