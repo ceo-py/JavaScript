@@ -35,8 +35,6 @@ function savingsForVacation(array) {
 
 
 
-
-
 // function vacation(array) {
 //     let vacationPrice = Number(array.shift())
 //     let availableMoney = Number(array.shift())
