@@ -1,6 +1,6 @@
 function matchTickets(list) {
     const [budget, category, peopleNumber] = list.map(x => isNaN(x) ? x : Number(x))
-    let [discount, ticketPrice, total] = [null, null, null]
+    let discount = 1
 
     if (peopleNumber >= 1 && peopleNumber < 5) {
         discount = 0.25
@@ -20,9 +20,9 @@ function matchTickets(list) {
     //     ticketPrice = 249.99
     // }
 
-    ticketPrice = category === 'VIP' ? 499.99 : 249.99
+    const ticketPrice = category === 'VIP' ? 499.99 : 249.99
 
-    total = (budget * discount) - ticketPrice * peopleNumber
+    const total = (budget * discount) - ticketPrice * peopleNumber
 
     console.log(total >= 0 ? `Yes! You have ${total.toFixed(2)} leva left.` :
                              `Not enough money! You need ${Math.abs(total).toFixed(2)} leva.`)
