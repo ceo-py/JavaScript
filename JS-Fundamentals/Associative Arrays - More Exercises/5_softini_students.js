@@ -2,8 +2,8 @@ function softUniStudents(input) {
     const courses = {}
 
     const addCourse = (name, size) => {
-        if (courses.hasOwnProperty(name)) courses[name].size += Number(size)
-        else courses[name] = {size: Number(size), students: []}
+        if (courses.hasOwnProperty(name)) courses[name].size += size
+        else courses[name] = {size: size, students: []}
     }
     const addStudent = (user, email, course) => {
         if (courses.hasOwnProperty(course) && courses[course].size > 0) {
@@ -14,7 +14,7 @@ function softUniStudents(input) {
     }
 
     input.forEach(x => {
-        if (x.includes(': ')) addCourse(...x.split(': '))
+        if (x.includes(': ')) addCourse(...x.split(': ').map(x => isNaN(x) ? x : Number(x)))
         else addStudent(...x.replace('with email ', '').replace('joins ', '').split(' '))
     })
 
