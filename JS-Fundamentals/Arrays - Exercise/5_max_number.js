@@ -1,6 +1,6 @@
 function maxNumber(list) {
     list.forEach((x , i) => {
-        if (x === Math.max(...list.slice(i, list.length))) {
+        if (x > Math.max(...list.slice(i + 1, list.length))) {
             process.stdout.write(`${x} `)
         }
     })
