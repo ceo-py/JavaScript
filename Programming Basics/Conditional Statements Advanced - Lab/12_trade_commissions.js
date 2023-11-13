@@ -62,4 +62,15 @@ function findCommission(array) {
 
 
 
+// function findCommission(array) {
+//     let [town, sales, commission] = [...array.map(x => isNaN(x) ? x : Number(x)), 0]
+//     const commissionData = {Sofia: [0.05, 0.07, 0.08, 0.12], Varna: [0.045, 0.075, 0.10, 0.13], Plovdiv: [0.055, 0.08, 0.12, 0.145], range: [500, 1_000, 10_000, 1_000_000]    }
+//     for (let i = 0; i < 4 && commissionData.hasOwnProperty(town) && sales > 0; i += 1) sales <= commissionData.range[i] ? (commission = commissionData[town][i], i = 4) : null;
+//     console.log(commission? (sales * commission).toFixed(2): 'error')
+// }
+
+
+
+
+
 findCommission(["Kaspichan", "-50"])
