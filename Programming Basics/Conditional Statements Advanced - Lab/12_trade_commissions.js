@@ -42,10 +42,8 @@ function findCommission(array) {
 }
 
 
-//
 // function findCommission(array) {
-//     const [town, sales] = array.map(x => isNaN(x) ? x : Number(x))
-//     let commission = 0
+//     let [town, sales, commission] = [...array.map(x => isNaN(x) ? x : Number(x)), 0]
 //     const commissionData = {
 //         Sofia: [0.05, 0.07, 0.08, 0.12],
 //         Varna: [0.045, 0.075, 0.10, 0.13],
