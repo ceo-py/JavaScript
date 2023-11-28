@@ -9,7 +9,7 @@ function solve(string) {
 
 
 // function solve(string) {
-//     string.split(' ').filter(word => word[0] === "#" && Array.from(word.slice(1)).every(c => (c.toUpperCase() >= 'A' && c.toUpperCase() <= 'Z'))).forEach(w => w.length > 1? console.log(w.slice(1)): null)
+//     string.split(' ').filter(w => w[0] === "#" && w.length > 1 && Array.from(w.slice(1)).every(c => (c.toUpperCase() >= 'A' && c.toUpperCase() <= 'Z')) && console.log(w.slice(1)))
 // }
 
 
