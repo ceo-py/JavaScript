@@ -6,7 +6,7 @@ function profit(param) {
             for (let notes = 0; notes <= notesFive; notes++) {
                 const totalNotes = notes * 5
                 if (c1 + totalC2 + totalNotes === lookingForSum) {
-                    console.log(`${c1} * 1 lv. + ${c2} * 2 lv. + ${notes} * 5 lv. = ${lookingForSum} lv.$`)
+                    console.log(`${c1} * 1 lv. + ${c2} * 2 lv. + ${notes} * 5 lv. = ${lookingForSum} lv.`)
                 }
             }
         }
