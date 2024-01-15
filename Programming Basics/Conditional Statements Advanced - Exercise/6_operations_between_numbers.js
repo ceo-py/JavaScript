@@ -33,3 +33,20 @@ function operationBetweenNumbers(array) {
 operationBetweenNumbers(["10",
     "12",
     "+"])
+
+
+//
+// function operationBetweenNumbers(array) {
+//     let [numberOne, numberTwo, operator] = array.map(x => isNaN(x) ? x : Number(x))
+//     let output = ''
+//     const result = eval(`${numberOne}${operator}${numberTwo}`)
+//     if (numberTwo !== 0 && '/%'.includes(operator)) {
+//         output = `${numberOne} ${operator} ${numberTwo} = ${operator === '/' ? result.toFixed(2) : result}`
+//     } else if ('+-*'.includes(operator)) {
+//         output = `${numberOne} ${operator} ${numberTwo} = ${result} - ${result % 2 === 0 ? 'even' : 'odd'}`
+//     } else {
+//         output = `Cannot divide ${numberOne} by zero`
+//     }
+//
+//     console.log(output)
+// }
