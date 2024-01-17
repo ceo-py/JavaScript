@@ -42,3 +42,33 @@ function hotelReservationCost(array) {
 hotelReservationCost(["30",
     "president apartment",
     "negative"])
+
+
+
+// function skiTrip(array) {
+//     const [days, roomType, score] = array.map(x => isNaN(x)? x: Number(x))
+//     const vacation = {
+//         'room for one person': {price: 18, discount: () => 1},
+//         'apartment': {price: 25, discount: () => {
+//             if ( days < 10 ) {
+//                 return 0.70
+//             } else if ( days < 15 ) {
+//                 return 0.65
+//             }else {
+//                 return 0.50
+//             }
+//             }},
+//         'president apartment': {price: 35, discount: () => {
+//             if ( days < 10 ) {
+//                 return 0.90
+//             } else if ( days < 15 ) {
+//                 return 0.85
+//             }else {
+//                 return 0.80
+//             }
+//             }},
+//         'score': score === 'positive' ? 1.25: 0.90,
+//     }
+//
+//     console.log((vacation[roomType].price * vacation[roomType].discount() * vacation.score * (days -1 )).toFixed(2))
+// }
