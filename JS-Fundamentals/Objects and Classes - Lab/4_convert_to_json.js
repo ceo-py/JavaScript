@@ -1,12 +1,12 @@
-function convertToJSON(firstName, lastName, hairColor) {
+function convertToJSON(name, lastName, hairColor) {
         class Person {
-        constructor(firstName, lastName, hairColor) {
-            this.firstName = firstName
+        constructor(name, lastName, hairColor) {
+            this.name = name
             this.lastName = lastName;
             this.hairColor = hairColor;
         }
     }
-    console.log(JSON.stringify(new Person(firstName, lastName, hairColor)))
+    console.log(JSON.stringify(new Person(name, lastName, hairColor)))
 }
 
 convertToJSON('George', 'Jones', 'Brown')
