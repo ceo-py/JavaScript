@@ -1,15 +1,21 @@
 function netherRealms(participants) {
-    const [lines, demons] = [participants.split(/[\s,]+/), {}];
+    const lines = participants.split(/[\s,]+/);
+
+    let demons = {};
 
     lines.forEach(line => {
-        const health = line.match(/[^0-9+-/*.]/g)?.reduce((a, char) => a + char.charCodeAt(0), 0) || 0;
+        const healthMatch = line.match(/[^0-9+-/*.]/g);
+        const health = healthMatch ? healthMatch.reduce((a, char) => a + char.charCodeAt(0), 0) : 0;
         const dmg = (line.match(/[+-]?\d+(\.\d+)?/g) || []).reduce((a, number) => a + Number(number), 0);
         const altering = line.match(/[*/]/g);
 
         demons[line] = { health, dmg };
 
-        if (altering) altering.forEach(alter => {demons[line].dmg *= alter === '*' ? 2 : 0.5});
-
+        if (altering) {
+            altering.forEach(alter => {
+                demons[line].dmg *= alter === '*' ? 2 : 0.5;
+            });
+        }
     });
 
     const filteredByName = Object.entries(demons).sort((a, b) => a[0].localeCompare(b[0]));
