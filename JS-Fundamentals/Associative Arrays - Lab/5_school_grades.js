@@ -3,7 +3,9 @@ function schoolGrades(list) {
 
     list.forEach(x => {
         const [name, ...grades] = x.split(' ')
-        const foundStudent = students.filter(x => x.name === name)[0]
+        const foundStudent = students.find(x => x.name === name)
+        // const foundStudent = students.filter(x => x.name === name)[0]
+
         if (!foundStudent) students.push({name, grades: [...grades]})
         else foundStudent.grades.push(...grades)
     })
