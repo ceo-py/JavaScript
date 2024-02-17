@@ -1,9 +1,9 @@
 function numbersInARow(array) {
-    let [target, currentNumber] = [array.pop(), 0]
+    let [target, currentNumber] = [array.pop(), 1]
 
-    while ((currentNumber * 2) + 1 < target) {
-        currentNumber = (currentNumber * 2) + 1
+    while (target >= currentNumber) {
         console.log(currentNumber)
+        currentNumber = (currentNumber * 2) + 1
     }
 }
 
