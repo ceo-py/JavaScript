@@ -1,33 +1,18 @@
 function excursionSale(input) {
-    let [sumTarget, total, isTargetReach] = [Number(input[0]), 0, false]
-    for (let index = 1; index < input.length; index += 2) {
-        const service = input[index]
-        if (service === "closed") break
-        let kindService = input[index + 1]
-        switch (kindService) {
-            case "mens":
-                total += 15
-                break;
-            case "ladies":
-                total += 20
-                break;
-            case "kids":
-                total += 10
-                break;
-            case "touch up":
-                total += 20
-                break;
-            case "full color":
-                total += 30
-                break;
+    let [countSea, countMountain, total, package, index] = [Number(input[0]), Number(input[1]), 0, input[2], 3]
+    while (package !== "Stop" && (countSea > 0 || countMountain > 0)) {
+        if (package === "sea" && countSea > 0) {
+            total += 680
+            countSea--
+        } else if (package === "mountain" && countMountain > 0) {
+            total += 499
+            countMountain--
         }
-        if (total >= sumTarget) {
-            isTargetReach = true;
-            break;
-        }
+        package = input[index]
+        index++
     }
-    if (isTargetReach) {
-        console.log(`You have reached your target for the day!`)
-    } else console.log(`Target not reached! You need ${sumTarget - total}lv. more.`)
-    console.log(`Earned money: ${total}lv.`)
+    if (countSea + countMountain === 0) {
+        console.log(`Good job! Everything is sold.`)
+    }
+    console.log(`Profit: ${total} leva.`)
 }
