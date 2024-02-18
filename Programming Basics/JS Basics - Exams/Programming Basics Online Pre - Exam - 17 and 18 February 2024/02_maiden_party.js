@@ -1,14 +1,14 @@
 function MaidenParty(input) {
-    let [priceTshirt, targetSum] = input.map(Number);
-    let short = 0.75 * priceTshirt
-    let socks = 0.20 * short
-    let shoes = (priceTshirt + short) * 2
-    let total = (priceTshirt + short + socks + shoes) * 0.85
-    if (total >= targetSum) {
-        console.log(`Yes, he will earn the world-cup replica ball!`)
-        console.log(`His sum is ${total.toFixed(2)} lv.`)
-    } else {
-        console.log(`No, he will not earn the world-cup replica ball.`)
-        console.log(`He needs ${(targetSum - total).toFixed(2)} lv. more.`)
+    let [priceParty, countLoveSms, countRoses, countKeyHolder, countCaricature, countSurprise,] = input.map(Number);
+    let discount = 1;
+    let total = 0;
+    if (countLoveSms + countRoses + countKeyHolder + countCaricature + countSurprise >= 25) {
+        discount = 0.65;
     }
+    total = (countLoveSms * 0.6 + countRoses * 7.2 + countKeyHolder * 3.6 + countCaricature * 18.2 + countSurprise * 22) * discount;
+
+    total *= 0.9;
+    if (priceParty <= total) {
+        console.log(`Yes! ${(total - priceParty).toFixed(2)} lv left.`);
+    } else console.log(`Not enough money! ${(priceParty - total).toFixed(2)} lv needed.`);
 }
