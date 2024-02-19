@@ -2,7 +2,7 @@ function hairSalon(input) {
     let [sumTarget, total, service, index] = [Number(input[0]), 0, input[1], 1]
 
     while (service !== "closed" && !total >= sumTarget) {
-        let kindService = input[index + 1]
+        const kindService = input[index + 1]
         if (kindService === "mens") total += 15
         else if (kindService === "ladies") total += 20
         else if (kindService === "kids") total += 10
@@ -24,7 +24,7 @@ function hairSalon(input) {
 //     for (let index = 1; index < input.length; index += 2) {
 //         const service = input[index]
 //         if (service === "closed") break
-//         let kindService = input[index + 1]
+//         const kindService = input[index + 1]
 //         switch (kindService) {
 //             case "mens":
 //                 total += 15
