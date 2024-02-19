@@ -1,9 +1,9 @@
-function ladybugsSimulation(input) {
+function ladybugs(input) {
     const fieldSize = input[0];
     let ladybugIndexes = input[1].split(' ').map(Number);
     const commands = input.slice(2);
 
-    let field = Array.from({ length: fieldSize }, () => 0);
+    let field = Array.from({length: fieldSize}, () => 0);
 
     ladybugIndexes.forEach(index => {
         if (index >= 0 && index < fieldSize) {
@@ -35,10 +35,6 @@ function ladybugsSimulation(input) {
 
     console.log(field.join(' '));
 }
-
-
-
-
 
 
 //
