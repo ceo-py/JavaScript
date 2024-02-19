@@ -1,5 +1,5 @@
 function hairSalon(input) {
-    let [sumTarget, total, service, index] = [Number(input[0]), 0, input[1], 2]
+    let [sumTarget, total, service, index] = [Number(input[0]), 0, input[1], 1]
 
     while (service !== "closed" && !total >= sumTarget) {
         let kindService = input[index + 1]
