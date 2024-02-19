@@ -1,8 +1,10 @@
 function checkFruitPrice(array) {
-    let [fruit, day, quantity] = array.map(x => isNaN(x) ? x : Number(x))
-    let output = 'error'
+    // let [fruit, day, quantity] = array.map(x => isNaN(x) ? x : Number(x))
+    let [fruit, day, quantity, output] = [array[0], array[1], Number(array[2]), 'error']
+    // let output = 'error'
 
-    if ('Monday, Tuesday, Wednesday, Thursday, Friday'.includes(day)) {
+    // if ('Monday, Tuesday, Wednesday, Thursday, Friday'.includes(day)) {
+    if ('Monday' === day || 'Tuesday' === day || 'Wednesday' === day || 'Thursday' === day || 'Friday' === day) {
         if (fruit === 'banana') {
             output = quantity * 2.50
         } else if (fruit === 'apple') {
@@ -18,7 +20,8 @@ function checkFruitPrice(array) {
         } else if (fruit === 'grapes') {
             output = quantity * 3.85
         }
-    } else if ('Saturday, Sunday'.includes(day)) {
+        // } else if ('Saturday, Sunday'.includes(day)) {
+    } else if ('Saturday' === day || 'Sunday' === day) {
         if (fruit === 'banana') {
             output = quantity * 2.70
         } else if (fruit === 'apple') {
