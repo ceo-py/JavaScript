@@ -1,9 +1,11 @@
 function partyTime(strings) {
-    const [regularList, vipList] = [[], []]
-    strings.slice(0, strings.indexOf('PARTY')).forEach(x => isNaN(x[0])? regularList.push(x): vipList.push(x))
-    strings.slice(strings.indexOf('PARTY') + 1).forEach(x => {
-        regularList.splice(regularList.indexOf(x), 1)
-        vipList.splice(vipList.indexOf(x), 1)
+
+    const [regularList, vipList, partyIndex] = [[], [], strings.indexOf('PARTY')]
+    strings.slice(0, partyIndex).forEach(x => isNaN(x[0]) ? regularList.push(x) : vipList.push(x))
+
+    strings.slice(partyIndex + 1).forEach(x => {
+        if (regularList.includes(x)) regularList.splice(regularList.indexOf(x), 1)
+        else if (vipList.includes(x)) vipList.splice(vipList.indexOf(x), 1)
     })
     console.log(`${regularList.length + vipList.length}\n${vipList.concat(regularList).join('\n')}`)
 }
