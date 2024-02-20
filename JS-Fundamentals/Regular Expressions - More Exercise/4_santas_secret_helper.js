@@ -1,14 +1,10 @@
 function santaSecretHelper(input) {
     const [key, goodChildren] = [input.shift(), []]
 
-    function GetDecodedInput(input, key) {
-        return input.split('').map(x => String.fromCharCode(x.charCodeAt(0) - key)).join('')
-    }
-
     for (const info of input) {
         if (info === 'end') break
 
-        const data = GetDecodedInput(info, key);
+        const data = info.split('').map(x => String.fromCharCode(x.charCodeAt(0) - key)).join('')
         let [regex, matchInfo] = [/[@](?<name>[A-Za-z]+)[^@!:>-]+[!](?<behaviour>[G|N])[!]/g, '']
 
         while ((matchInfo = regex.exec(data)) !== null) {
