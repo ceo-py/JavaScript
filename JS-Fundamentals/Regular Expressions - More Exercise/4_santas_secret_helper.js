@@ -1,7 +1,7 @@
 function santaSecretHelper(input) {
-    const [key, goodChildren] = [input.shift(), []]
+    const [key, goodChildren] = [input[0], []]
 
-    for (const info of input.splice(0, input.indexOf('end'))) {
+    for (const info of input.splice(1, input.indexOf('end'))) {
         const data = info.split('').map(x => String.fromCharCode(x.charCodeAt(0) - key)).join('')
         let [regex, matchInfo] = [/[@](?<name>[A-Za-z]+)[^@!:>-]+[!](?<behaviour>[G|N])[!]/g, '']
 
