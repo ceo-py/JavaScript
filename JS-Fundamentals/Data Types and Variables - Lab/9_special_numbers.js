@@ -20,3 +20,12 @@ specialNumbers(15)
 //     console.log(`${i} -> ${isSpecialNumber}`);
 //   }
 // }
+
+
+// function specialNumbers(number) {
+//     const specialNums = [5, 7, 11];
+//     for (let i = 1; i <= number; i++) {
+//         let sum = Array.from(String(i), Number).reduce((a, b) => a + b, 0);
+//         console.log(`${i} -> ${specialNums.includes(sum) ? 'True' : 'False'}`);
+//     }
+// }
