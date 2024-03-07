@@ -22,3 +22,22 @@ function garage(list) {
 }
 
 garage([])
+
+
+
+// function garage(list) {
+//   const parking = {};
+//   for (const elem of list) {
+//     const [garage, ...car] = elem.split(' - ');
+//     if (garage in parking) {
+//       parking[garage].push(...car);
+//       continue;
+//     }
+//     parking[garage] = car;
+//   }
+//   return parking;
+// }
+//
+// // usage
+// const parking = garage(list);
+// console.log(parking);

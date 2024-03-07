@@ -4,3 +4,9 @@ function dayOfWeek(number) {
 }
 
 dayOfWeek(0)
+
+
+// function dayOfWeek(number) {
+//     const days = ['Invalid day!', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+//     return days[number] || 'Invalid day!';
+// }

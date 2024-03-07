@@ -18,3 +18,16 @@ aMinerTask([
         '17'
     ]
 )
+
+
+
+// function aMinerTask(resources) {
+//     const result = new Map();
+//     for (let i = 0; i < resources.length; i += 2) {
+//         const resource = resources[i];
+//         const quantity = Number(resources[i + 1]);
+//         const currentQuantity = result.get(resource) || 0;
+//         result.set(resource, currentQuantity + quantity);
+//     }
+//     result.forEach((quantity, resource) => console.log(`${resource} -> ${quantity}`));
+// }

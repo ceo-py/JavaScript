@@ -63,4 +63,25 @@ function equalNeighbors(matrix) {
 
 
 
+// function equalNeighbors(matrix) {
+//     let counter = 0;
+//     const directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]; // up, down, left, right
+//
+//     matrix.forEach((row, rowI) => {
+//         row.forEach((_, eI) => {
+//             directions.forEach(([dRow, dCol]) => {
+//                 const rowToLook = rowI + dRow;
+//                 const colToLook = eI + dCol;
+//
+//                 if (rowToLook >= 0 && colToLook >= 0 && rowToLook < matrix.length && colToLook < row.length) {
+//                     counter += matrix[rowToLook][colToLook] === matrix[rowI][eI] ? 1 : 0;
+//                 }
+//             });
+//         });
+//     });
+//
+//     console.log(counter / 2);
+// }
+
+
 equalNeighbors([['test', 'yo', 'yo', 'ho'], ['well', 'done', 'no', '6'], ['not', 'done', 'yet', '5']])

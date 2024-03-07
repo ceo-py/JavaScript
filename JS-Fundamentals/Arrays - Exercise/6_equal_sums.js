@@ -15,3 +15,13 @@ function findEqualSums(arr) {
     }
     console.log(output)
 }
+
+// function findEqualSums(arr) {
+//     if (arr.length <= 1) return '0';
+//     for (let i = 1; i < arr.length; i++) {
+//         let leftSum = arr.slice(0, i).reduce((total, num) => total + num, 0);
+//         let rightSum = arr.slice(i + 1).reduce((total, num) => total + num, 0);
+//         if (leftSum === rightSum) return i;
+//     }
+//     return 'no';
+// }

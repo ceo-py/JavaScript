@@ -14,3 +14,13 @@ function bombNumbers(sequence, specialBomb) {
 }
 
 bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1]);
+
+
+// function bombNumbers(sequence, specialBomb) {
+//     const [bomb, power] = specialBomb;
+//     sequence = sequence.filter((_, index) => {
+//         return index < Math.max(0, sequence.indexOf(bomb) - power) ||
+//                index > Math.min(sequence.length - 1, sequence.indexOf(bomb) + power);
+//     });
+//     return sequence.reduce((acc, num) => acc + num, 0);
+// }

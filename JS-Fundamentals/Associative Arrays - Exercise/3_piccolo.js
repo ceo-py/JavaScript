@@ -39,6 +39,25 @@ function piccolo(list) {
 //     }
 // }
 
+// function piccolo(list) {
+//     const parkedCars = [];
+//     for (const item of list) {
+//         const [direction, carNumber] = item.split(', ');
+//         if (direction === "IN") {
+//             if (!parkedCars.includes(carNumber)) {
+//                 parkedCars.push(carNumber);
+//             }
+//         } else {
+//             const index = parkedCars.indexOf(carNumber);
+//             if (index !== -1) {
+//                 parkedCars.splice(index, 1);
+//             }
+//         }
+//     }
+//     parkedCars.sort();
+//     console.log(parkedCars.length === 0 ? "Parking Lot is Empty" : parkedCars.join("\n"));
+// }
+
 
 piccolo(['IN, CA2844AA',
     'IN, CA1234TA',

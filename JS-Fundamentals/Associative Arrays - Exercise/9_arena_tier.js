@@ -83,3 +83,27 @@ function arenaTier(list) {
 //         });
 //     });
 // }
+
+
+// function arenaTier(list) {
+//     const gladiatorsList = {}
+//
+//     list.forEach(x => {
+//         const [name, skill, amount] = x.split(' -> ').map(x => isNaN(x) ? x : Number(x))
+//
+//         if (!gladiatorsList[name]) gladiatorsList[name] = {[skill]: amount}
+//         else if (!gladiatorsList[name][skill] || gladiatorsList[name][skill] < amount) gladiatorsList[name][skill] = amount
+//     })
+//
+//     Object.entries(gladiatorsList).sort((a, b) => {
+//         const aSum = Object.values(a[1]).reduce((acc, val) => acc + val, 0)
+//         const bSum = Object.values(b[1]).reduce((acc, val) => acc + val, 0)
+//         return bSum - aSum
+//     }).forEach(([gladiator, skills]) => {
+//         console.log(`${gladiator}: ${Object.values(skills).reduce((acc, skill) => acc + skill, 0)} skill`)
+//         Object.entries(skills).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).forEach(([skill, points]) => {
+//             console.log(`- ${skill} <!> ${points}`)
+//         })
+//     })
+// }
+

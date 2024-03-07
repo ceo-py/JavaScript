@@ -5,3 +5,16 @@ function addAndRemove(list) {
 }
 
 addAndRemove(['add', 'add', 'remove', 'add', 'add']  )
+
+
+// function addAndRemove(list) {
+//     const result = [];
+//     list.forEach((x) => {
+//         if (x === 'add') {
+//             result.push(result.length + 1);
+//         } else {
+//             result.pop();
+//         }
+//     });
+//     console.log(result.length > 0 ? result.join(' ') : 'Empty');
+// }

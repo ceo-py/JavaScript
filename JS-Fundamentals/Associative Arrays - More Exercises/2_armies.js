@@ -46,3 +46,48 @@ function solve(list) {
         }
     }
 }
+
+
+// function solve(list) {
+//     let output = {};
+//
+//     list.forEach(item => {
+//         if (item.includes('defeated')) {
+//             let name = item.replace(' defeated', '');
+//             delete output[name];
+//         } else if (item.includes('arrives')) {
+//             let name = item.replace(' arrives', '');
+//             if (!output.hasOwnProperty(name)) {
+//                 output[name] = { armys: [], totalArmy: 0 };
+//             }
+//         } else if (item.includes('+')) {
+//             let [armyName, count] = item.split(' + ');
+//             count = parseInt(count);
+//             for (let key in output) {
+//                 output[key].armys.forEach(army => {
+//                     if (army.name === armyName) {
+//                         army.count += count;
+//                         output[key].totalArmy += count;
+//                     }
+//                 });
+//             }
+//         } else {
+//             let [leader, armyInfo] = item.split(': ');
+//             let [armyName, armyCount] = armyInfo.split(', ');
+//             if (output.hasOwnProperty(leader)) {
+//                 armyCount = parseInt(armyCount);
+//                 output[leader].armys.push({name: armyName, count: armyCount});
+//                 output[leader].totalArmy += armyCount;
+//             }
+//         }
+//     });
+//
+//     Object.entries(output)
+//         .sort(([, a], [, b]) => b.totalArmy - a.totalArmy)
+//         .forEach(([name, army]) => {
+//             console.log(`${name}: ${army.totalArmy}`);
+//             army.armys
+//                 .sort((a, b) => b.count - a.count)
+//                 .forEach(({name, count}) => console.log(`>>> ${name} - ${count}`));
+//         });
+// }

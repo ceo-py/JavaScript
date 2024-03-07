@@ -8,3 +8,13 @@ function rotateArray(list) {
 }
 
 rotateArray(['1', '2', '3', '4', '2'])
+
+
+// function rotateArray(list) {
+//     let rotation = Number(list.pop());
+//     for(let i = 0; i < rotation; i++) {
+//         list.unshift(list.pop());
+//     }
+//     console.log(list.join(' '));
+// }
+

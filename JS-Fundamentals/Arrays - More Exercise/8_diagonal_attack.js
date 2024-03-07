@@ -24,3 +24,26 @@ diagonalAttack(['5 3 12 3 1',
     '1 4 5 2 2',
     '5 22 33 11 1']
 )
+
+// function diagonalAttack(list) {
+//     let matrix = list.map(x => x.split(' ').map(Number));
+//     let lDiag = 0, rDiag = 0;
+//     let lNumbers = [], rNumbers = [];
+//
+//     for (let i = 0; i < matrix.length; i++) {
+//         lDiag += matrix[i][i];
+//         lNumbers.push(matrix[i][i]);
+//         rDiag += matrix[i][matrix.length - 1 - i];
+//         rNumbers.push(matrix[i][matrix.length - 1 - i]);
+//     }
+//
+//     if (lDiag === rDiag) {
+//         matrix = Array.from({length: matrix.length}, () => Array(matrix.length).fill(rDiag));
+//         for (let i = 0; i < matrix.length; i++) {
+//             matrix[i][i] = lNumbers[i];
+//             matrix[i][matrix.length - 1 - i] = rNumbers[i];
+//         }
+//     }
+//
+//     matrix.forEach(x => console.log(x.join(' ')));
+// }

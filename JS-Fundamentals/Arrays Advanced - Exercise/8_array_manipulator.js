@@ -92,3 +92,41 @@ arrayManipulator([1, 2, 3, 4, 5], ['addMany 5 9 8 7 6 5', 'contains 15', 'remove
 //
 // manipulateArray([2, 2, 4, 2, 4],
 // ["add 1 4", "sumPairs", "print"])
+
+
+// function arrayManipulator(initialArray, manipulations) {
+//     manipulations.forEach(x => {
+//         const [command, ...args] = x.split(' ').map(e => isNaN(e) ? e : Number(e));
+//         switch (command) {
+//             case 'add':
+//                 initialArray.splice(args[0], 0, args[1]);
+//                 break;
+//             case 'addMany':
+//                 initialArray.splice(args[0], 0, ...args.slice(1));
+//                 break;
+//             case 'contains':
+//                 console.log(initialArray.indexOf(args[0]));
+//                 break;
+//             case 'remove':
+//                 initialArray.splice(args[0], 1);
+//                 break;
+//             case 'shift':
+//                 for (let i = 0; i < args[0]; i++) {
+//                     initialArray.push(initialArray.shift());
+//                 }
+//                 break;
+//             case 'sumPairs':
+//                 const output = [];
+//                 for (let i = 0; i < initialArray.length; i += 2) {
+//                     const firstNum = initialArray[i];
+//                     const secondNum = initialArray[i + 1] ? initialArray[i + 1] : 0;
+//                     output.push(firstNum + secondNum);
+//                 }
+//                 initialArray = output;
+//                 break;
+//             case 'print':
+//                 console.log(`[ ${initialArray.join(', ')} ]`);
+//                 break;
+//         }
+//     });
+// }

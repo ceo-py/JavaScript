@@ -10,3 +10,11 @@ function condenseArrayToNumber(list) {
 }
 
 condenseArrayToNumber([1])
+
+
+// function condenseArrayToNumber(list) {
+//     while (list.length > 1) {
+//         list = list.map((num, i, arr) => num + (arr[i + 1] || 0)).slice(0, -1);
+//     }
+//     console.log(list[0]);
+// }

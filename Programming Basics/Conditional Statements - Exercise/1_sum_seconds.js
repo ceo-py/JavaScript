@@ -19,3 +19,9 @@ convertSecondsToMinutes(["14", "12",
     "10"])
 
 
+// function convertSecondsToMinutes(array) {
+//     const totalTime = array.map(Number).reduce((a, b) => a + b, 0);
+//     const minutes = Math.floor(totalTime / 60);
+//     const seconds = totalTime % 60;
+//     console.log(`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`);
+// }

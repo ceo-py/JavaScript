@@ -18,3 +18,21 @@ function equalArrays(listOne, listTwo) {
 }
 
 equalArrays(['1', '2', '3', '4', '5'], ['1', '2', '3', '4', '5', '6'])
+
+
+// function equalArrays(listOne, listTwo) {
+//     if (listOne.length !== listTwo.length) {
+//         console.log(`Arrays are not identical. Different lengths.`);
+//         return;
+//     }
+//
+//     let differenceIndex = listOne.findIndex((value, index) => value !== listTwo[index]);
+//
+//     if (differenceIndex !== -1) {
+//         console.log(`Arrays are not identical. Found difference at ${differenceIndex} index`);
+//         return;
+//     }
+//
+//     let sum = listOne.reduce((a, b) => a + b, 0);
+//     console.log(`Arrays are identical. Sum: ${sum}`);
+// }

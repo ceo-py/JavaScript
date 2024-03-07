@@ -4,3 +4,8 @@ function commonElements(listOne, listTwo) {
 
 commonElements(['Hey', 'hello', 2, 4, 'Peter', 'e'],
 ['Petar', 10, 'hey', 4, 'hello', '2'])
+
+
+// function commonElements(listOne, listTwo) {
+//     return listOne.filter(x => listTwo.includes(x));
+// }

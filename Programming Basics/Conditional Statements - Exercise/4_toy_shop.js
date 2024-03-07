@@ -32,3 +32,26 @@ function moneyForVacation(array) {
 }
 
 moneyForVacation(["40.8", "20", "25", "30", "50", "10"])
+
+
+
+// function moneyForVacation([vacationPrice, puzzles, talkingDolls, teddyBears, minions, trucks]) {
+//     const prices = [2.60, 3, 4.10, 8.20, 2];
+//     const quantities = [puzzles, talkingDolls, teddyBears, minions, trucks].map(Number);
+//
+//     let totalCost = quantities.reduce((sum, quantity, index) => sum + quantity * prices[index], 0);
+//     const totalToys = quantities.reduce((sum, quantity) => sum + quantity, 0);
+//
+//     if (totalToys >= 50) {
+//         totalCost *= 0.75;
+//     }
+//     totalCost *= 0.90;
+//
+//     const leftMoney = Math.abs(vacationPrice - totalCost).toFixed(2);
+//
+//     if (totalCost >= vacationPrice) {
+//         console.log(`Yes! ${leftMoney} lv left.`);
+//     } else {
+//         console.log(`Not enough money! ${leftMoney} lv needed.`);
+//     }
+// }

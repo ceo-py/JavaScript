@@ -23,3 +23,33 @@ function tseamAccount(list) {
 }
 
 tseamAccount(['CS WoW Diablo', 'Install LoL', 'Uninstall WoW', 'Update Diablo', 'Expansion CS-Go', 'Play!'])
+
+
+// function tseamAccount(list) {
+//     const gamesOnAccount = list.shift().split(' ');
+//     const commands = {
+//         Install: (game) => {
+//             if (!gamesOnAccount.includes(game)) gamesOnAccount.push(game);
+//         },
+//         Uninstall: (game) => {
+//             if (gamesOnAccount.includes(game)) gamesOnAccount = gamesOnAccount.filter(g => g !== game);
+//         },
+//         Update: (game) => {
+//             if (gamesOnAccount.includes(game)) {
+//                 gamesOnAccount.push(game);
+//                 gamesOnAccount = gamesOnAccount.filter(g => g !== game);
+//             }
+//         },
+//         Expansion: (game, expansion) => {
+//             if (gamesOnAccount.includes(game)) gamesOnAccount.splice(gamesOnAccount.indexOf(game) + 1, 0, `${game}:${expansion}`);
+//         }
+//     };
+//
+//     for (const data of list) {
+//         if (data === 'Play!') break;
+//         const [command, item] = data.split(' ');
+//         commands[command](...(item.includes('-') ? item.split('-') : [item]));
+//     }
+//
+//     console.log(gamesOnAccount.join(' '));
+// }

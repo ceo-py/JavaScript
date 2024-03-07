@@ -21,3 +21,27 @@ houseParty(['Tom is going!',
 'Tom is going!',
 'Garry is going!',
 'Jerry is going!'])
+
+
+// function houseParty(array) {
+//     let guestList = [];
+//     array.forEach(guestAction => {
+//         const [guestName, action] = guestAction.split(' ');
+//
+//         if (action === 'not') {
+//             if (guestList.includes(guestName)) {
+//                 guestList = guestList.filter(name => name !== guestName);
+//             } else {
+//                 console.log(`${guestName} is not in the list!`);
+//             }
+//         } else {
+//             if (guestList.includes(guestName)) {
+//                 console.log(`${guestName} is already in the list!`);
+//             } else {
+//                 guestList.push(guestName);
+//             }
+//         }
+//     });
+//
+//     console.log(guestList.join('\n'));
+// }

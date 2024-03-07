@@ -47,4 +47,26 @@ function buildAWall(input) {
 // 	console.log(pesos + ' pesos');
 // }
 
+
+// function buildAWall(input) {
+//     let pesos = 0;
+//     const concreteUsedEachDay = [];
+//
+//     while (input.some(height => height < 30)) {
+//         const dailyConcreteUsed = input.reduce((total, height, index) => {
+//             if (height < 30) {
+//                 input[index]++;
+//                 total += 195;
+//                 pesos += 195 * 1900;
+//             }
+//             return total;
+//         }, 0);
+//
+//         concreteUsedEachDay.push(dailyConcreteUsed);
+//     }
+//
+//     console.log(concreteUsedEachDay.join(', '));
+//     console.log(pesos + ' pesos');
+// }
+
 buildAWall([21, 25, 28])

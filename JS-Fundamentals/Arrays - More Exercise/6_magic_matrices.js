@@ -20,6 +20,19 @@ function magicMatrices(matrix) {
 
 
 
+// function magicMatrices(matrix) {
+//     const rowSum = matrix[0].reduce((a, b) => a + b, 0);
+//     for (let i = 0; i < matrix.length; i++) {
+//         const row = matrix[i].reduce((a, b) => a + b, 0);
+//         const col = matrix.reduce((a, b) => a + b[i], 0);
+//         if (row !== rowSum || col !== rowSum) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+
 // function magicMatrices(arr) {
 //      const sumRow = arr.map((col => col.reduce((a,b) => a + b)))
 //      const sumCol = arr.reduce((r, a) => r.map((b, i) => a[i] + b))

@@ -7,3 +7,10 @@ function searchForANumber(initialElements, array) {
 
 searchForANumber([7, 1, 5, 8, 2, 7],
     [3, 1, 5])
+
+
+// function searchForANumber(initialElements, array) {
+//     const [takingElements, deletingElements, searchElement] = array;
+//     const taken = initialElements.slice(deletingElements, takingElements);
+//     console.log(`Number ${searchElement} occurs ${taken.filter(x => x === searchElement).length} times.`);
+// }

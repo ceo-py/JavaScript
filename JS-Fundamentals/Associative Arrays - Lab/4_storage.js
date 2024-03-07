@@ -24,6 +24,18 @@ function storage(list) {
 //   })
 // }
 
+
+// function storage(list) {
+//   const items = [];
+//   list.forEach(x => {
+//     const [item, value] = x.split(' ').map(x => isNaN(x) ? x : Number(x));
+//     const foundItem = items.find(x => x.item === item);
+//     if (!foundItem) items.push({item, value});
+//     else foundItem.value += value;
+//   });
+//   items.forEach(x => console.log(`${x.item} -> ${x.value}`));
+// }
+
 storage(['tomatoes 10',
 'coffee 5',
 'olives 100',

@@ -19,3 +19,22 @@ companyUsers([
 'Microsoft -> CC12345',
 'HP -> BB12345']
 )
+
+
+// function companyUsers(list) {
+//   const company = new Map();
+//
+//   list.forEach(x => {
+//     const [companyName, employeeId] = x.split(' -> ');
+//     const employees = company.get(companyName) || new Set();
+//     employees.add(employeeId);
+//     company.set(companyName, employees);
+//   });
+//
+//   Array.from(company.entries())
+//     .sort((a, b) => a[0].localeCompare(b[0], undefined, { sensitivity: 'base' }))
+//     .forEach(([companyName, employees]) => {
+//       console.log(companyName);
+//       employees.forEach(e => console.log(`-- ${e}`));
+//     });
+// }

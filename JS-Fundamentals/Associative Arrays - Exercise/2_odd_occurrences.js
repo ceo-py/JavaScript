@@ -26,4 +26,14 @@ function oddOccurrences(string) {
 //     })
 // }
 
+// function oddOccurrences(string) {
+//     const listOfStrings = string.toLowerCase().split(' ');
+//     const result = {};
+//
+//     listOfStrings.forEach(x => result[x] = (result[x] || 0) + 1);
+//
+//     const oddOccurrences = listOfStrings.filter(x => result[x] % 2 !== 0);
+//     process.stdout.write(oddOccurrences.join(' '));
+// }
+
 oddOccurrences('Java C# Php PHP Java PhP 3 C# 3 1 5 C#')

@@ -40,3 +40,12 @@ addedMinutes(["0", "56"]);
 // }
 //
 // addedMinutes(["11", "08"])
+
+
+
+// function addedMinutes(input) {
+//     const totalMinutes = input[0] * 60 + input[1] + 15;
+//     const hours = Math.floor(totalMinutes / 60) % 24;
+//     const minutes = totalMinutes % 60;
+//     console.log(`${hours}:${minutes < 10 ? '0' : ''}${minutes}`);
+// }

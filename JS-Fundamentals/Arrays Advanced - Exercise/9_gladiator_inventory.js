@@ -74,3 +74,31 @@ gladiatorInventory(['SWORD Shield Spear',
 //
 //     console.log(inventory.join(' '));
 // }
+
+
+
+// function gladiatorInventory(initialInput) {
+//     const inventory = new Set(initialInput.shift().split(' '));
+//     const commands = {
+//         Buy: equipment => inventory.add(equipment),
+//         Trash: equipment => inventory.delete(equipment),
+//         Repair: equipment => {
+//             if (inventory.delete(equipment)) {
+//                 inventory.add(equipment);
+//             }
+//         },
+//         Upgrade: data => {
+//             const [equipment, upgrade] = data.split('-');
+//             if (inventory.delete(equipment)) {
+//                 inventory.add(`${equipment}:${upgrade}`);
+//             }
+//         },
+//     };
+//
+//     initialInput.forEach(x => {
+//         const [command, ...args] = x.split(' ');
+//         commands[command](...args);
+//     });
+//
+//     console.log([...inventory].join(' '));
+// }

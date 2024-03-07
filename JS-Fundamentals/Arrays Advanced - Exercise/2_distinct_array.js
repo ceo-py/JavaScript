@@ -9,3 +9,9 @@ function distinctArray(array) {
 }
 
 distinctArray([7, 8, 9, 7, 2, 3, 4, 1, 2])
+
+
+// function distinctArray(array) {
+//     const result = [...new Set(array)];
+//     console.log(result.join(' '));
+// }

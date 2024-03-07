@@ -15,3 +15,18 @@ function partyTime(strings) {
 partyTime(['7IK9Yo0h', '9NoBUajQ', 'Ce8vwPmE', 'SVQXQCbc', 'tSzE5t0p', 'PARTY', '9NoBUajQ', 'Ce8vwPmE', 'SVQXQCbc'
 
 ])
+
+
+
+// function partyTime(strings) {
+//     const partyIndex = strings.indexOf('PARTY');
+//     let regularList = strings.slice(0, partyIndex).filter(x => isNaN(x[0]));
+//     let vipList = strings.slice(0, partyIndex).filter(x => !isNaN(x[0]));
+//
+//     strings.slice(partyIndex + 1).forEach(x => {
+//         regularList = regularList.filter(item => item !== x);
+//         vipList = vipList.filter(item => item !== x);
+//     });
+//
+//     console.log(`${regularList.length + vipList.length}\n${vipList.concat(regularList).join('\n')}`);
+// }
