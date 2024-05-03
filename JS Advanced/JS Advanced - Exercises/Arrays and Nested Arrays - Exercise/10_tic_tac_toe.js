@@ -1,7 +1,7 @@
 function ticTacToe(moves) {
   let board = Array.from({ length: 3 }, () => Array(3).fill(false));
   const players = ["X", "O"];
-  let moveCount = 0;
+  let [moveCount, winner] = [0, "The game ended! Nobody wins :("];
 
   function printBoard(board) {
     board.forEach((row) => {
@@ -50,19 +50,16 @@ function ticTacToe(moves) {
     moveCount++;
 
     if (checkWinner(board, currentPlayer)) {
-      console.log(`Player ${currentPlayer} wins!`);
-      printBoard(board);
-      return;
+      winner = `Player ${currentPlayer} wins!`;
+      break;
     }
 
     if (moveCount === 9) {
-      console.log("The game ended! Nobody wins :(");
-      printBoard(board);
-      return;
+      break;
     }
   }
 
-  console.log("The game ended! Nobody wins :(");
+  console.log(winner);
   printBoard(board);
 }
 
