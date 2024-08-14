@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+
+
+
+body {
+  background-image: url("../images/showroom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10vh;
+  text-shadow: 3px 3px black;
+  color: rgb(204,204,204);
+  margin-top: -2px;
+}
+body > h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vh;
+  text-shadow: 1px 2px black;
+  color: rgb(204,204,204);
+  margin-top: -40px; 
+  margin-bottom: 34px;
+  background-color: #0f0c1f8d;
+  padding: 4px 20px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+#content {
+  margin-top: -250px;
+}
+.test-ride-form {
+  width: 80vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 13.5rem;
+  margin-left: 3rem;
+  background-color: #0f0c1f8d;
+  padding: 20px 0px;
+  border-radius: 20px;
+  flex-direction: row;
+}
+#input-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.test-ride-form input,
+.test-ride-form button {
+  width: 10rem;
+  height: 1.6rem;
+}
+
+.test-ride-form select {
+  width: 10rem;
+  height: 1.6rem;
+}
+
+input::placeholder{
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-container button{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  font-family: "New Rocker", system-ui;
+}
+
+.complete-btn{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  font-family: "New Rocker", system-ui;
+  font-size: 11px;
+}
+
+.edit-btn:hover{
+  background-color: green;
+  color: white;
+}
+.next-btn:hover{
+  background-color: green;
+  color: white;
+}
+.complete-btn:hover{
+  background-color: green;
+  color: white;
+}
+
+.confirm-btn{
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  background-image: url(../images/wheel.png);
+  background-position: center;
+background-size:cover ;
+color: rgb(70, 216, 123);
+text-shadow: 2px 2px black;
+font-size: 20px;
+font-weight: 700;
+}
+
+.confirm-btn:hover{
+scale: 1.3;
+}
+
+#test-ride-btn {
+background-image: url(../images/test-ride.png);
+background-position: center;
+background-size:cover ;
+height: 90px;
+width: 90px;
+border-radius: 20px;
+}
+
+#test-ride-btn:hover {
+scale: 1.3;
+}
+
+#test-ride-btn:disabled {
+  cursor: not-allowed;
+border: 5px solid red;
+  color: white;
+  scale: 1;
+}
+
+.back-btn {
+  width: 15vw;
+  height: 10vh;
+  cursor: pointer;
+  font-size: 28px;
+  margin-top: -37px;
+}
+
+
+
+.data-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.data-view li {
+  background-color: #0f0c1f9a;
+  color: white;
+  width: 70vw;
+  height: 20vh;
+  display: flex;
+  padding: 0px 30px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  border-radius: 20px;
+}
+
+.data-view li article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+  flex-wrap: wrap;
+}
+
+.purchase  p {
+  margin: 0;
+  font-size: 13px;
+}
+form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label{
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .data-view li {
+    width: 50vw;
+    height: 90vh;
+  
+  }
+
+}
