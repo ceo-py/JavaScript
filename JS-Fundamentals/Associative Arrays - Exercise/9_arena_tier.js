@@ -5,9 +5,7 @@ function arenaTier(list) {
         if (x.includes('->')) {
             const [name, skill, amount] = x.split(' -> ').map(x => isNaN(x) ? x : Number(x))
             if (!gladiatorsList[name]) gladiatorsList[name] = {[skill]: amount}
-            if (gladiatorsList[name][skill] < amount) {
-                gladiatorsList[name][skill] = amount
-            } else if (!gladiatorsList[name][skill]) gladiatorsList[name][skill] = amount
+            if (!gladiatorsList[name][skill] || gladiatorsList[name][skill] < amount) gladiatorsList[name][skill] = amount
         } else if (x.includes(' vs ')) {
             const [gladiatorOneName, gladiatorTwoName] = x.split(' vs ')
             if (gladiatorsList[gladiatorOneName] && gladiatorsList[gladiatorTwoName]) {
@@ -15,21 +13,18 @@ function arenaTier(list) {
                 if (foundSkills.length !== 0) {
                     const gladiatorOnePower = eval(Object.values(gladiatorsList[gladiatorOneName]).join('+'))
                     const gladiatorTwoPower = eval(Object.values(gladiatorsList[gladiatorTwoName]).join('+'))
-                    if (gladiatorOnePower > gladiatorTwoPower) {
-                        delete gladiatorsList[gladiatorTwoName]
-                    } else delete gladiatorsList[gladiatorOneName]
-                }
+                    delete gladiatorsList[gladiatorOnePower > gladiatorTwoPower ? gladiatorTwoName : gladiatorOneName]                }
             }
         }
     })
 
-    const test = Object.entries(gladiatorsList).sort(([aKey, aValue], [bKey, bValue]) => {
+    const sordetGladiators = Object.entries(gladiatorsList).sort(([aKey, aValue], [bKey, bValue]) => {
         const aSum = eval(Object.values(aValue).join('+'))
         const bSum = eval(Object.values(bValue).join('+'))
         return bSum - aSum
     })
 
-    test.forEach(([gladiator, skills]) => {
+    sordetGladiators.forEach(([gladiator, skills]) => {
         console.log(`${gladiator}: ${Object.values(skills).reduce((acc, skill) => acc + skill, 0)} skill`);
         const sortedSkills = Object.entries(skills)
             .sort(([aSkill, aPoints], [bSkill, bPoints]) => bPoints - aPoints || aSkill.localeCompare(bSkill));
@@ -89,11 +84,20 @@ function arenaTier(list) {
 //     const gladiatorsList = {}
 //
 //     list.forEach(x => {
+//         if (x.includes('->')) {
 //         const [name, skill, amount] = x.split(' -> ').map(x => isNaN(x) ? x : Number(x))
 //
 //         if (!gladiatorsList[name]) gladiatorsList[name] = {[skill]: amount}
 //         else if (!gladiatorsList[name][skill] || gladiatorsList[name][skill] < amount) gladiatorsList[name][skill] = amount
-//     })
+//     }
+//     else if (x.includes(' vs ')) {
+//         const [gladiatorOneName, gladiatorTwoName] = x.split(' vs ')
+//         if (gladiatorsList[gladiatorOneName] && gladiatorsList[gladiatorTwoName] &&
+//             Object.keys(gladiatorsList[gladiatorOneName]).filter(x => Object.keys(gladiatorsList[gladiatorTwoName]).includes(x)).length !== 0) {
+//             const gladiatorOnePower = eval(Object.values(gladiatorsList[gladiatorOneName]).join('+'))
+//             const gladiatorTwoPower = eval(Object.values(gladiatorsList[gladiatorTwoName]).join('+'))
+//             delete gladiatorsList[gladiatorOnePower > gladiatorTwoPower ? gladiatorTwoName : gladiatorOneName]
+//         }    }})
 //
 //     Object.entries(gladiatorsList).sort((a, b) => {
 //         const aSum = Object.values(a[1]).reduce((acc, val) => acc + val, 0)
@@ -104,6 +108,28 @@ function arenaTier(list) {
 //         Object.entries(skills).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).forEach(([skill, points]) => {
 //             console.log(`- ${skill} <!> ${points}`)
 //         })
+//     })
+// }
+
+
+// function arenaTier(list) {
+//     const gladiatorsList = {}
+//     list.forEach(x => {
+//         if (x.includes('->')) {
+//             const [name, skill, amount] = x.split(' -> ').map(x => isNaN(x) ? x : Number(x))
+//             if (!gladiatorsList[name]) gladiatorsList[name] = {[skill]: amount}
+//             else if (!gladiatorsList[name][skill] || gladiatorsList[name][skill] < amount) gladiatorsList[name][skill] = amount
+//         } else if (x.includes(' vs ')) {
+//             const [gladiatorOneName, gladiatorTwoName] = x.split(' vs ')
+//             if (gladiatorsList[gladiatorOneName] && gladiatorsList[gladiatorTwoName] && Object.keys(gladiatorsList[gladiatorOneName]).filter(x => Object.keys(gladiatorsList[gladiatorTwoName]).includes(x)).length !== 0) {
+//                 const gladiatorOnePower = eval(Object.values(gladiatorsList[gladiatorOneName]).join('+')), gladiatorTwoPower = eval(Object.values(gladiatorsList[gladiatorTwoName]).join('+'))
+//                 delete gladiatorsList[gladiatorOnePower > gladiatorTwoPower ? gladiatorTwoName : gladiatorOneName]
+//             }
+//         }
+//     })
+//     Object.entries(gladiatorsList).sort((a, b) => Object.values(b[1]).reduce((acc, val) => acc + val, 0) - Object.values(a[1]).reduce((acc, val) => acc + val, 0)).forEach(([gladiator, skills]) => {
+//         console.log(`${gladiator}: ${Object.values(skills).reduce((acc, skill) => acc + skill, 0)} skill`)
+//         Object.entries(skills).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).forEach(([skill, points]) => console.log(`- ${skill} <!> ${points}`))
 //     })
 // }
 
